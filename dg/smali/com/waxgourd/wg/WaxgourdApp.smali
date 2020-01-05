@@ -976,7 +976,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    goto :cond_0
 
     const-string v0, "\u60a8\u7684\u5b89\u88c5\u5305\u5f02\u5e38\uff0c\u8bf7\u524d\u5f80\u5b98\u7f51\u4e0b\u8f7d\u6700\u65b0\u5b89\u88c5\u5305"
 
