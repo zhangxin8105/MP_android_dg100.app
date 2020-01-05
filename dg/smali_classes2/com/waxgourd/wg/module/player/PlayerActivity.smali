@@ -757,7 +757,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :goto_0
 
     goto :goto_0
 
@@ -802,7 +802,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :goto_0
 
     goto :goto_0
 
