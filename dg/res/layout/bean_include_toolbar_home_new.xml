@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="@color/toolbar_background_homepage" android:layout_width="fill_parent" android:layout_height="44.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/ib_back_toolbar_homepage" android:background="@color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_nav_back" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_search" android:background="@drawable/shape_search_toolbar_homepage" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_centerVertical="true" android:paddingStart="@dimen/searchBar_padding" android:paddingEnd="@dimen/searchBar_padding" android:layout_toStartOf="@id/iv_history_toolbar_homepage" android:layout_toEndOf="@id/ib_back_toolbar_homepage" android:layout_alignParentStart="true">
+        <TextView android:textSize="@dimen/text_size_14sp" android:textColor="@color/search_font_searchWord" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_searchBtn_toolbar_homepage" android:layout_width="0.0dip" android:layout_height="30.0dip" android:lines="1" android:layout_weight="1.0" />
+        <View android:background="#ffbebebe" android:layout_width="1.0dip" android:layout_height="13.0dip" />
+        <ImageView android:id="@id/iv_search" android:layout_width="13.0dip" android:layout_height="15.0dip" android:src="@drawable/ic_nav_search_yellow" android:layout_marginStart="13.0dip" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_history_toolbar_homepage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_history" android:layout_centerVertical="true" android:layout_marginStart="12.0dip" android:layout_toStartOf="@id/iv_share_toolbar_homepage" />
+    <ImageView android:id="@id/iv_share_toolbar_homepage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home_share" android:layout_centerVertical="true" android:layout_marginStart="12.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

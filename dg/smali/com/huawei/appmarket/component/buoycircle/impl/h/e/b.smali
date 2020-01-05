@@ -1,0 +1,176 @@
+.class public Lcom/huawei/appmarket/component/buoycircle/impl/h/e/b;
+.super Landroid/content/BroadcastReceiver;
+.source "SourceFile"
+
+
+# instance fields
+.field private handler:Landroid/os/Handler;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
+
+    .line 29
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    .line 30
+    iput-object p1, p0, Lcom/huawei/appmarket/component/buoycircle/impl/h/e/b;->handler:Landroid/os/Handler;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    const-string p1, "TestIntent"
+
+    .line 41
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 47
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "com.huawei.appmarket.service.downloadservice.Receiver"
+
+    .line 49
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 50
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    return-void
+
+    .line 55
+    :cond_1
+    new-instance p2, Landroid/os/Message;
+
+    invoke-direct {p2}, Landroid/os/Message;-><init>()V
+
+    const/16 v0, 0x65
+
+    .line 56
+    iput v0, p2, Landroid/os/Message;->what:I
+
+    .line 57
+    iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 58
+    iget-object p1, p0, Lcom/huawei/appmarket/component/buoycircle/impl/h/e/b;->handler:Landroid/os/Handler;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "com.huawei.appmarket.service.downloadservice.progress.Receiver"
+
+    .line 60
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 61
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    return-void
+
+    .line 67
+    :cond_3
+    new-instance p2, Landroid/os/Message;
+
+    invoke-direct {p2}, Landroid/os/Message;-><init>()V
+
+    const/16 v0, 0x66
+
+    .line 68
+    iput v0, p2, Landroid/os/Message;->what:I
+
+    .line 69
+    iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 70
+    iget-object p1, p0, Lcom/huawei/appmarket/component/buoycircle/impl/h/e/b;->handler:Landroid/os/Handler;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    goto :goto_0
+
+    :cond_4
+    const-string v0, "com.huawei.appmarket.service.installerservice.Receiver"
+
+    .line 71
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    .line 72
+    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    if-nez p1, :cond_5
+
+    return-void
+
+    .line 77
+    :cond_5
+    new-instance p2, Landroid/os/Message;
+
+    invoke-direct {p2}, Landroid/os/Message;-><init>()V
+
+    const/16 v0, 0x67
+
+    .line 78
+    iput v0, p2, Landroid/os/Message;->what:I
+
+    .line 79
+    iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 80
+    iget-object p1, p0, Lcom/huawei/appmarket/component/buoycircle/impl/h/e/b;->handler:Landroid/os/Handler;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_6
+    :goto_0
+    return-void
+
+    :catch_0
+    const-string p1, "SilentInstallReceiver"
+
+    const-string p2, "intent has some error"
+
+    .line 43
+    invoke-static {p1, p2}, Lcom/huawei/appmarket/component/buoycircle/impl/c/a;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

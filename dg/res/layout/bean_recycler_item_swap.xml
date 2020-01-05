@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="81.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_vip" android:layout_marginTop="18.0dip" android:layout_marginStart="12.0dip" style="@style/iv_swap_vip" />
+    <TextView android:id="@id/tv_vip_name" android:layout_marginTop="20.0dip" android:includeFontPadding="false" android:layout_toEndOf="@id/iv_vip" style="@style/tv_swap_vip" />
+    <TextView android:id="@id/tv_count" android:layout_marginTop="5.0dip" android:includeFontPadding="false" android:layout_below="@id/tv_vip_name" android:layout_toEndOf="@id/iv_vip" style="@style/tv_swap_date" />
+    <TextView android:id="@id/tv_time" android:includeFontPadding="false" android:layout_alignTop="@id/tv_count" android:layout_toEndOf="@id/tv_count" style="@style/tv_swap_date" />
+    <TextView android:enabled="false" android:id="@id/btn_swap" android:layout_centerVertical="true" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" style="@style/btn_swap_swap" />
+    <View android:background="@color/swap_background" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

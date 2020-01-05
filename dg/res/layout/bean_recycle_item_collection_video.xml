@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@id/ll_recycle_item_video_module" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_recycle_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_recycle_item_videoPic_collection" app:layout_constraintTop_toTopOf="parent" style="@style/homepage_recycle_videoPic" />
+    <View android:id="@id/view_background_videoPic_collection" android:background="@color/history_background_selected" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_recycle_pic_height" app:layout_constraintBottom_toBottomOf="@id/iv_recycle_item_videoPic_collection" />
+    <CheckBox android:id="@id/cb_recycle_item_collection" android:layout_marginTop="4.0dip" android:layout_marginEnd="4.0dip" app:layout_constraintEnd_toEndOf="@id/view_background_videoPic_collection" app:layout_constraintTop_toTopOf="@id/view_background_videoPic_collection" style="@style/history_checkbox" />
+    <TextView android:gravity="top" android:id="@id/tv_recycle_item_videoName_collection" android:layout_marginBottom="9.0dip" android:lines="2" app:layout_constraintTop_toBottomOf="@id/iv_recycle_item_videoPic_collection" style="@style/homepage_recycle_videoName" />
+    <android.support.constraint.Group android:id="@id/group_recycle_item_collection" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="cb_recycle_item_collection,view_background_videoPic_collection" />
+</android.support.constraint.ConstraintLayout>

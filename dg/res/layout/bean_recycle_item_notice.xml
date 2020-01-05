@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:paddingTop="14.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_14sp" android:textStyle="bold" android:textColor="@color/notice_title" android:id="@id/tv_title_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/text_size_12sp" android:textColor="@color/notice_publishTime" android:id="@id/tv_publishTime_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/text_size_14sp" android:textColor="@color/notice_content" android:id="@id/tv_content_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/text_size_14sp" android:textStyle="bold" android:textColor="@color/notice_title" android:id="@id/tv_webTitle_notice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:includeFontPadding="false" />
+    <TextView android:textSize="@dimen/text_size_14sp" android:textColorLink="@color/notice_webUrl" android:autoLink="web" android:id="@id/tv_webUrl_notice" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:includeFontPadding="false" />
+</LinearLayout>

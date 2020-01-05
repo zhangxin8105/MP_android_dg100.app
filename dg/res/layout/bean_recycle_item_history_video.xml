@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@id/ll_recycle_item_video_module" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_recycle_item_videoPic_history" app:layout_constraintTop_toTopOf="parent" style="@style/homepage_recycle_videoPic" />
+    <ImageView android:id="@id/iv_bg_gray" android:background="@drawable/ic_shadow_cover" android:layout_width="fill_parent" android:layout_height="30.0dip" app:layout_constraintBottom_toBottomOf="@id/iv_recycle_item_videoPic_history" />
+    <TextView android:id="@id/tv_recycle_item_videoPercent_history" app:layout_constraintBottom_toBottomOf="@id/iv_bg_gray" app:layout_constraintTop_toTopOf="@id/iv_bg_gray" style="@style/history_recycle_videoPercent" />
+    <View android:id="@id/view_background_videoPic_history" android:background="@color/history_background_selected" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_recycle_pic_height" app:layout_constraintBottom_toBottomOf="@id/iv_recycle_item_videoPic_history" />
+    <CheckBox android:id="@id/cb_recycle_item_history" android:layout_marginTop="6.0dip" android:layout_marginEnd="9.0dip" app:layout_constraintEnd_toEndOf="@id/view_background_videoPic_history" app:layout_constraintTop_toTopOf="@id/view_background_videoPic_history" style="@style/history_checkbox" />
+    <TextView android:id="@id/tv_recycle_item_videoName_history" android:paddingTop="10.0dip" android:paddingBottom="0.0dip" android:text="這是影片的名字" android:lines="2" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/iv_recycle_item_videoPic_history" style="@style/homepage_recycle_videoName" />
+    <android.support.constraint.Group android:id="@id/group_recycle_item_history" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="cb_recycle_item_history,view_background_videoPic_history" />
+</android.support.constraint.ConstraintLayout>

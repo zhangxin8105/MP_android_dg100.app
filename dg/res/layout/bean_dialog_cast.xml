@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="52.0dip">
+        <TextView android:textSize="@dimen/text_size_18sp" android:textStyle="bold" android:textColor="@color/dialog_title_share" android:gravity="center" android:id="@id/tv_title_castDialog" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/dialog_cast_selectDevice" />
+        <TextView android:textSize="@dimen/text_size_14sp" android:textColor="@color/dialog_castDialog_content" android:layout_gravity="end|center" android:id="@id/tv_helper_castDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_cast_castHelper" android:layout_marginEnd="10.0dip" />
+    </FrameLayout>
+    <View android:background="@color/homepage_background_main" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <android.support.v7.widget.RecyclerView android:orientation="vertical" android:id="@id/rv_castDialog" android:background="@color/homepage_background_main" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    <TextView android:textSize="@dimen/text_size_18sp" android:textColor="@color/dialog_share_font_cancel" android:gravity="center" android:id="@id/tv_cancel_castDialog" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="52.0dip" android:text="@string/dialog_cancel" />
+</LinearLayout>

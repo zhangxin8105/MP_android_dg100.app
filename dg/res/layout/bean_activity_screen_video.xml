@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@id/cl_screenVideo_activity" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:id="@id/appBay_screenVideo_activity" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/toolbar_height_modify" app:elevation="0.0dip">
+        <android.support.v7.widget.RecyclerView android:id="@id/rv_area_screenVideo_activity" android:layout_marginTop="15.0dip" app:layoutManager="android.support.v7.widget.LinearLayoutManager" app:layout_scrollFlags="scroll" style="@style/recycler_screen_video" />
+        <android.support.v7.widget.RecyclerView android:id="@id/rv_type_screenVideo_activity" android:visibility="gone" android:layout_marginTop="15.0dip" app:layoutManager="android.support.v7.widget.LinearLayoutManager" app:layout_scrollFlags="scroll" style="@style/recycler_screen_video" />
+        <android.support.v7.widget.RecyclerView android:id="@id/rv_year_screenVideo_activity" android:layout_marginTop="15.0dip" app:layoutManager="android.support.v7.widget.LinearLayoutManager" app:layout_scrollFlags="scroll" style="@style/recycler_screen_video" />
+        <android.support.v7.widget.RecyclerView android:orientation="horizontal" android:id="@id/rv_update_screenVideo_activity" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" app:layoutManager="android.support.v7.widget.LinearLayoutManager" app:layout_scrollFlags="scroll" style="@style/recycler_screen_video" />
+    </android.support.design.widget.AppBarLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView android:id="@id/rv_screenVideo_activity" app:layoutManager="android.support.v7.widget.GridLayoutManager" app:spanCount="3" style="@style/videoList_recycle_module" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <include app:layout_constraintTop_toTopOf="parent" layout="@layout/bean_include_toolbar_new" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/recycle_item_screen_video_bg" android:gravity="center" android:id="@id/tv_screenContent_screenVideo" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/toolbar_height_modify" />
+</android.support.design.widget.CoordinatorLayout>

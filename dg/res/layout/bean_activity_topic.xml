@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/layout_actionBar" layout="@layout/bean_include_toolbar_new" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/layout_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/homepage_tabLayout_height">
+        <android.support.v7.widget.RecyclerView android:orientation="vertical" android:id="@id/rv_beanTopic_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</FrameLayout>

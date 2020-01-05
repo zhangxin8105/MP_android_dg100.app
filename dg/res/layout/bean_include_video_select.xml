@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/fl_selectItem_player" android:background="@color/colorWhite" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_18sp" android:textStyle="bold" android:textColor="@color/videoPlayer_font_title" android:id="@id/tv_selectAll_videoSelect" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/videoPlayer_selectAll" android:includeFontPadding="false" android:layout_marginStart="10.0dip" />
+    <ImageView android:layout_gravity="end" android:id="@id/iv_close_videoSelect" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="34.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:src="@drawable/ic_com_close" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="60.0dip">
+        <com.flyco.tablayout.SlidingTabLayout android:id="@id/tabLayout_videoSelect" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tl_divider_padding="10.0dip" app:tl_tab_space_equal="false" app:tl_textSelectColor="#ffffad43" app:tl_textUnselectColor="#ff737373" app:tl_textsize="@dimen/text_size_15sp" />
+        <android.support.v4.view.ViewPager android:id="@id/pager_videoItem_videoSelect" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" />
+    </LinearLayout>
+</FrameLayout>

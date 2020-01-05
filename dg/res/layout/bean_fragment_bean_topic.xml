@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/bean_include_toolbar_home_new" />
+    <com.waxgourd.wg.ui.widget.LoadingView android:id="@id/loadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/toolbar_height_modify">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/layout_refresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.v7.widget.RecyclerView android:orientation="vertical" android:id="@id/rv_beanTopic_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </com.waxgourd.wg.ui.widget.LoadingView>
+</FrameLayout>

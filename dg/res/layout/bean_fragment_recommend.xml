@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.waxgourd.wg.ui.widget.LoadingView android:id="@id/loadingView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refresh_recommend_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <android.support.design.widget.CoordinatorLayout android:id="@id/cl_recommend_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.design.widget.AppBarLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+                    <com.waxgourd.wg.ui.widget.Banner android:id="@id/banner_recommend_fragment" android:layout_width="fill_parent" android:layout_height="160.0dip" app:indicator_drawable_selected="@drawable/shape_indicator_banner" app:layout_scrollFlags="scroll" app:title_height="40.0dip" app:title_textcolor="@color/colorWhite" app:title_textsize="@dimen/text_size_16sp" />
+                    <com.waxgourd.wg.ui.widget.TextSwitcher android:id="@id/text_switcher_notice" android:layout_width="fill_parent" android:layout_height="43.0dip" android:inAnimation="@anim/notice_text_in" android:outAnimation="@anim/notice_text_out" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" app:layout_scrollFlags="scroll" />
+                    <View android:background="@color/colorDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_scrollFlags="scroll" />
+                </android.support.design.widget.AppBarLayout>
+                <android.support.v7.widget.RecyclerView android:id="@id/rv_recommend_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="android.support.v7.widget.GridLayoutManager" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:spanCount="3" />
+            </android.support.design.widget.CoordinatorLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </com.waxgourd.wg.ui.widget.LoadingView>
+</FrameLayout>

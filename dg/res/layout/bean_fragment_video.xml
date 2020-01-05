@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@color/toolbar_background_homepage" android:layout_width="fill_parent" android:layout_height="@dimen/homepage_tabLayout_height">
+        <ImageView android:id="@id/iv_logo_video_fragment" android:background="@color/toolbar_background_homepage" android:layout_width="wrap_content" android:layout_height="@dimen/homepage_tabLayout_height" android:src="@drawable/ic_nav_logo" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+        <com.flyco.tablayout.SlidingTabLayout android:layout_gravity="center_vertical" android:id="@id/tabLayout_video_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" app:tl_indicator_color="@color/homepage_font_chose" app:tl_indicator_height="3.0dip" app:tl_indicator_width="12.0dip" app:tl_tab_padding="12.0dip" app:tl_textBold="SELECT" app:tl_textSelectColor="@color/homepage_font_chose" app:tl_textUnselectColor="@color/homepage_font_no_chose" app:tl_textsize="@dimen/text_size_16sp" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="@dimen/homepage_tabLayout_height" android:layout_marginTop="@dimen/homepage_tabLayout_height" layout="@layout/bean_include_toolbar_home_new" />
+    <com.waxgourd.wg.ui.widget.BeanViewPager android:id="@id/vp_video_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="88.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/layout_history_window" android:background="@drawable/shape_bg_layout_history" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="289.0dip" android:layout_height="36.0dip" android:layout_marginBottom="20.0dip" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" android:layout_marginStart="20.0dip">
+        <ImageView android:id="@id/iv_history_close" android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/ic_close_white" />
+        <TextView android:textSize="@dimen/text_size_12sp" android:textColor="@color/colorWhite" android:ellipsize="end" android:id="@id/tv_history_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+        <TextView android:textSize="@dimen/text_size_12sp" android:textColor="@color/colorWhite" android:ellipsize="end" android:id="@id/tv_history_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_marginStart="5.0dip" />
+        <TextView android:textSize="@dimen/text_size_12sp" android:textColor="#ffffad43" android:id="@id/tv_history_jump" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="跳转播放" android:layout_marginStart="12.0dip" />
+    </LinearLayout>
+</FrameLayout>

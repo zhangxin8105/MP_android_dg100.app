@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar android:id="@id/tb_home_toolbar" style="@style/toolbar_custom.black">
+        <TextView android:textSize="@dimen/text_size_18sp" android:textColor="@color/search_font_searchWord" android:gravity="start|center" android:id="@id/tv_home_toolbar" android:background="@drawable/shape_search_toolbar_homepage" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/searchBar_resources_name" android:drawablePadding="@dimen/searchBar_margin_input2icon" android:drawableEnd="@drawable/ic_nav_search" android:paddingStart="@dimen/searchBar_padding" android:paddingEnd="@dimen/searchBar_padding" />
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

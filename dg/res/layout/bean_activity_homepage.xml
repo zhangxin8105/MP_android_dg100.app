@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/fl_homepage_activity" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/nav_height_homepage" />
+    <com.flyco.tablayout.CommonTabLayout android:layout_gravity="bottom" android:id="@id/CommonTabLayout" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="@dimen/nav_height_homepage" app:tl_iconMargin="4.0dip" app:tl_indicator_color="@color/transparent" app:tl_textSelectColor="@color/homepage_nav_font_chose" app:tl_textUnselectColor="@color/homepage_nav_font_no_chose" app:tl_textsize="@dimen/text_size_10sp" />
+    <View android:layout_gravity="bottom" android:background="@color/cl_divider_toolbar" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="@dimen/nav_height_homepage" />
+</merge>

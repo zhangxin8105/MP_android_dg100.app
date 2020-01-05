@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout android:background="@color/transparent" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="56.0dip" app:elevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:layout_gravity="center" android:id="@id/tb_black_toolbar" app:layout_scrollFlags="enterAlways|scroll" app:titleTextColor="@color/colorWhite" style="@style/toolbar_custom.black">
+        <TextView android:textSize="@dimen/text_size_14sp" android:id="@id/tv_black_toolbar" android:drawablePadding="6.0dip" android:layout_marginEnd="16.0dip" style="@style/title_toolbar.black" />
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

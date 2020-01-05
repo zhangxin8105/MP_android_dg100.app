@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginTop="150.0dip" android:src="@drawable/ic_loading_network_error" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/loading_solve" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="265.0dip">
+        <TextView android:textSize="@dimen/text_size_13sp" android:textColor="#ff333333" android:id="@id/tv_no_network" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="网络无连接，" />
+        <TextView android:textSize="@dimen/text_size_13sp" android:textColor="#ffffad43" android:id="@id/tv_solve" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看解决方案" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/text_size_13sp" android:textColor="#ffffad43" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/loading_retry" android:background="@drawable/shape_bg_loading_btn_retry" android:layout_width="90.0dip" android:layout_height="30.0dip" android:layout_marginTop="310.0dip" android:text="点击重试" />
+</FrameLayout>

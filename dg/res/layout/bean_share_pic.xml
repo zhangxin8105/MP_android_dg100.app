@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="@dimen/share_width_sharePic" android:layout_height="@dimen/share_height_sharePic"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_bg" android:background="@drawable/ic_bg_qr_code" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:src="@drawable/ic_logo_qr_code" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_qrCode_sharePic" android:layout_width="155.0dip" android:layout_height="155.0dip" android:layout_marginTop="24.0dip" />
+        <TextView android:textSize="@dimen/text_size_13sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/share_text_qr_code" />
+        <TextView android:textSize="@dimen/text_size_13sp" android:textColor="@color/colorWhite" android:id="@id/tv_web_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="21.0dip" android:src="@drawable/ic_vip_bottom_qr_code" />
+    </LinearLayout>
+</FrameLayout>

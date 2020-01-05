@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@color/colorDivider" android:layout_width="fill_parent" android:layout_height="6.0dip" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@id/tv_feedback_type_title" android:layout_marginTop="21.0dip" android:text="反馈类型：" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/tv_feedback_history_title" />
+    <TextView android:id="@id/tv_feedback_type" app:layout_constraintBottom_toBottomOf="@id/tv_feedback_type_title" app:layout_constraintStart_toEndOf="@id/tv_feedback_type_title" style="@style/tv_feedback_history_content" />
+    <TextView android:id="@id/tv_feedback_time_title" android:text="反馈时间：" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_feedback_type_title" style="@style/tv_feedback_history_title" />
+    <TextView android:id="@id/tv_feedback_time" app:layout_constraintBottom_toBottomOf="@id/tv_feedback_time_title" app:layout_constraintStart_toEndOf="@id/tv_feedback_time_title" style="@style/tv_feedback_history_content" />
+    <TextView android:id="@id/tv_feedback_content_title" android:text="反馈内容：" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_feedback_time_title" style="@style/tv_feedback_history_title" />
+    <TextView android:id="@id/tv_feedback_content" android:layout_marginTop="15.0dip" android:layout_marginStart="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_feedback_content_title" style="@style/tv_feedback_history_content" />
+    <TextView android:id="@id/tv_feedback_reply_title" android:text="客服回复：" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_feedback_content" style="@style/tv_feedback_history_title" />
+    <TextView android:id="@id/tv_feedback_reply" android:layout_marginTop="15.0dip" android:layout_marginStart="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_feedback_reply_title" style="@style/tv_feedback_history_content" />
+    <TextView android:id="@id/tv_feedback_reply_time_title" android:text="反馈时间：" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tv_feedback_reply" style="@style/tv_feedback_history_title" />
+    <TextView android:id="@id/tv_feedback_reply_time" app:layout_constraintBottom_toBottomOf="@id/tv_feedback_reply_time_title" app:layout_constraintStart_toEndOf="@id/tv_feedback_reply_time_title" style="@style/tv_feedback_history_content" />
+    <android.support.constraint.Group android:id="@id/group_reply" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="tv_feedback_reply_title,tv_feedback_reply,tv_feedback_reply_time_title,tv_feedback_reply_time" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="44.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/text_size_14sp" android:textColor="@color/dialog_castDialog_deviceName" android:gravity="center_vertical" android:id="@id/tv_recycle_item_deviceName" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="1.0dip" android:drawablePadding="14.0dip" android:drawableStart="@drawable/ic_vedio_showb" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+    <CheckedTextView android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/ctv_recycle_item_deviceName" android:layout_width="wrap_content" android:layout_height="fill_parent" android:checkMark="@drawable/selector_checkbox_cast" android:layout_marginEnd="10.0dip" />
+</FrameLayout>
