@@ -78,6 +78,8 @@
     .line 65
     iget-object v0, p0, Lcom/waxgourd/wg/javabean/UserCenterBean;->is_vip:Ljava/lang/String;
 
+    const-string v0, "4"
+
     return-object v0
 .end method
 
@@ -175,7 +177,9 @@
     .locals 0
 
     .line 69
-    iput-object p1, p0, Lcom/waxgourd/wg/javabean/UserCenterBean;->is_vip:Ljava/lang/String;
+    const-string v0, "4"
+
+    iput-object v0, p0, Lcom/waxgourd/wg/javabean/UserCenterBean;->is_vip:Ljava/lang/String;
 
     return-void
 .end method
