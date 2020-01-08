@@ -78,7 +78,7 @@
     .line 65
     iget-object v0, p0, Lcom/waxgourd/wg/javabean/UserCenterBean;->is_vip:Ljava/lang/String;
 
-    const-string v0, "4"
+    const-string v0, "2"
 
     return-object v0
 .end method
@@ -151,6 +151,8 @@
 
     .line 73
     iget-object v0, p0, Lcom/waxgourd/wg/javabean/UserCenterBean;->vip_time:Ljava/lang/String;
+
+    const-string v0, "90"
 
     return-object v0
 .end method
