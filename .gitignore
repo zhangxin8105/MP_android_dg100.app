@@ -1,3 +1,8 @@
-build/
 
+# 编译apk
+build/
 dg_build*.apk
+
+# 反编译的工具dex代码
+IPTVToolsApp/
+
