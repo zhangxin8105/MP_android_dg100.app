@@ -2869,6 +2869,9 @@
 .method private e(Lcom/waxgourd/wg/javabean/VideoPlayerBean;)V
     .locals 2
 
+    # 屏蔽播放界面广告
+    goto :cond_0
+
     .line 1039
     invoke-virtual {p1}, Lcom/waxgourd/wg/javabean/VideoPlayerBean;->isAd()Z
 
