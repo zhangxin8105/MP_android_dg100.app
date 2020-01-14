@@ -2,7 +2,7 @@
 <merge android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/videoPlayer_height_player">
-        <com.waxgourd.wg.ui.widget.LandLayoutVideo android:id="@id/videoPlayer_player" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <dg.tools.CsaLandLayoutVideo android:id="@id/videoPlayer_player" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <ImageView android:id="@id/iv_waitPic_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/pic_waiting_play" android:scaleType="centerCrop" />
         <ImageView android:layout_gravity="end" android:id="@id/iv_close_waitPic_player" android:visibility="gone" android:layout_width="@dimen/videoPlayer_around_closeBtn" android:layout_height="@dimen/videoPlayer_around_closeBtn" android:layout_marginTop="@dimen/videoPlayer_margin_closeBtn2Around" android:scaleType="centerInside" android:layout_marginEnd="@dimen/videoPlayer_margin_closeBtn2Around" />
         <TextView android:textSize="@dimen/text_size_14sp" android:textColor="@color/colorWhite" android:layout_gravity="bottom|center" android:id="@id/tv_netSpeed_player" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/videoPlayer_margin_closeBtn2Around" android:text="@string/videoPlayer_netSpeed" />
