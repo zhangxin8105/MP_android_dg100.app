@@ -3,12 +3,32 @@
 .source "AdActivityTools.java"
 
 
+# static fields
+.field private static final TAG:Ljava/lang/String;
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 19
+    const-class v0, Ldg/tools/AdActivityTools;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ldg/tools/AdActivityTools;->TAG:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 17
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,13 +39,20 @@
     .param p0, "ad"    # Landroid/app/Activity;
 
     .prologue
-    .line 20
+    .line 22
+    sget-object v0, Ldg/tools/AdActivityTools;->TAG:Ljava/lang/String;
+
+    const-string v1, "AdActivityTools.close"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 24
     if-eqz p0, :cond_0
 
-    .line 21
+    .line 25
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 23
+    .line 27
     :cond_0
     invoke-static {}, Lcom/alibaba/android/arouter/launcher/ARouter;->getInstance()Lcom/alibaba/android/arouter/launcher/ARouter;
 
@@ -39,6 +66,6 @@
 
     invoke-virtual {v0}, Lcom/alibaba/android/arouter/facade/Postcard;->navigation()Ljava/lang/Object;
 
-    .line 24
+    .line 28
     return-void
 .end method
