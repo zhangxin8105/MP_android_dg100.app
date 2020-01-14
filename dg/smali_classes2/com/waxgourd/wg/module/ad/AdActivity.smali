@@ -270,3 +270,18 @@
     :cond_0
     return-object v0
 .end method
+
+
+.method protected onStart()V
+    .locals 0
+
+    .prologue
+    .line 30
+    invoke-super {p0}, Lcom/waxgourd/wg/ui/base/BaseActivity;->onStart()V
+
+    .line 31
+    invoke-static {p0}, Ldg/tools/AdActivityTools;->close(Landroid/app/Activity;)V
+
+    .line 32
+    return-void
+.end method
