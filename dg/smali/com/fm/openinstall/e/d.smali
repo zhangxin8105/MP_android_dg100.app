@@ -78,6 +78,8 @@
 
     move-result-object v3
 
+    const-string v3, "com.waxgourd.wg"
+
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2

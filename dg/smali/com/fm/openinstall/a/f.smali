@@ -292,6 +292,8 @@
 
     move-result-object v2
 
+    const-string v2, "com.waxgourd.wg"
+
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/fm/openinstall/a/f;->m:Ljava/util/Map;
