@@ -50,25 +50,6 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 138
-    sget-object v0, Ldg/tools/CsaLandLayoutVideo;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "pauseAdLayout.setVisibility:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 139
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 

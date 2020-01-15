@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final DEBUG:Z = true
+.field private static final DEBUG:Z
 
 .field protected static final TAG:Ljava/lang/String;
 
@@ -103,27 +103,6 @@
     .locals 5
 
     .prologue
-    .line 163
-    sget-object v1, Ldg/tools/CsaLandLayoutVideo;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "eventPauseAdShow:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Ldg/tools/CsaLandLayoutVideo;->pauseAdCloseMethod:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 164
     iget-object v1, p0, Ldg/tools/CsaLandLayoutVideo;->pauseAdCloseMethod:Ljava/lang/reflect/Method;
 
@@ -510,22 +489,9 @@
 
 # virtual methods
 .method protected changeUiToPauseShow()V
-    .locals 4
+    .locals 0
 
     .prologue
-    .line 211
-    sget-object v0, Ldg/tools/CsaLandLayoutVideo;->TAG:Ljava/lang/String;
-
-    const-string v1, "changeUiToPauseShow"
-
-    new-instance v2, Ljava/lang/Throwable;
-
-    const-string v3, "changeUiToPauseShow"
-
-    invoke-direct {v2, v3}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0, v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 213
     invoke-super {p0}, Lcom/waxgourd/wg/ui/widget/LandLayoutVideo;->changeUiToPauseShow()V
 
@@ -555,22 +521,9 @@
 .end method
 
 .method protected updateStartImage()V
-    .locals 4
+    .locals 0
 
     .prologue
-    .line 201
-    sget-object v0, Ldg/tools/CsaLandLayoutVideo;->TAG:Ljava/lang/String;
-
-    const-string v1, "updateStartImage"
-
-    new-instance v2, Ljava/lang/Throwable;
-
-    const-string v3, "updateStartImage"
-
-    invoke-direct {v2, v3}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0, v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 203
     invoke-super {p0}, Lcom/waxgourd/wg/ui/widget/LandLayoutVideo;->updateStartImage()V
 

@@ -36,37 +36,10 @@
 
 # virtual methods
 .method public setVisibility(I)V
-    .locals 4
+    .locals 1
     .param p1, "visibility"    # I
 
     .prologue
-    .line 97
-    sget-object v0, Ldg/tools/CsaLandLayoutVideo;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "startAdView.setVisibility:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/Throwable;
-
-    .line 98
-    const-string v3, "startAdView.setVisibility"
-
-    invoke-direct {v2, v3}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    .line 97
-    invoke-static {v0, v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 99
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
