@@ -2,7 +2,7 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@id/iv_cover"
     android:layout_width="fill_parent"
-    android:layout_height="88.0dip"
+    android:layout_height="0.0dip"
     android:background="#fff2f2f2"
     android:paddingTop="6.0dip" />
 
