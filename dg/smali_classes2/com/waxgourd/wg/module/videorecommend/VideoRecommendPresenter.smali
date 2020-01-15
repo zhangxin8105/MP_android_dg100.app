@@ -77,6 +77,8 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Ldg/tools/BannerListTools;->removeAd(Ljava/util/List;)V
+
     if-eqz v0, :cond_1
 
     .line 50
