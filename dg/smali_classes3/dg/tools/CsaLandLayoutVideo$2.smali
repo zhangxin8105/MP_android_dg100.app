@@ -27,7 +27,7 @@
     .line 1
     iput-object p1, p0, Ldg/tools/CsaLandLayoutVideo$2;->this$0:Ldg/tools/CsaLandLayoutVideo;
 
-    .line 132
+    .line 145
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -37,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 132
+    .line 145
     iget-object v0, p0, Ldg/tools/CsaLandLayoutVideo$2;->this$0:Ldg/tools/CsaLandLayoutVideo;
 
     return-object v0
@@ -50,10 +50,10 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 139
+    .line 152
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 141
+    .line 154
     iget-object v0, p0, Ldg/tools/CsaLandLayoutVideo$2;->this$0:Ldg/tools/CsaLandLayoutVideo;
 
     invoke-static {v0}, Ldg/tools/CsaLandLayoutVideo;->access$0(Ldg/tools/CsaLandLayoutVideo;)Landroid/widget/FrameLayout;
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 142
+    .line 155
     iget-object v0, p0, Ldg/tools/CsaLandLayoutVideo$2;->this$0:Ldg/tools/CsaLandLayoutVideo;
 
     invoke-static {v0}, Ldg/tools/CsaLandLayoutVideo;->access$0(Ldg/tools/CsaLandLayoutVideo;)Landroid/widget/FrameLayout;
@@ -73,12 +73,12 @@
 
     invoke-direct {v1, p0}, Ldg/tools/CsaLandLayoutVideo$2$1;-><init>(Ldg/tools/CsaLandLayoutVideo$2;)V
 
-    .line 148
+    .line 161
     const-wide/16 v2, 0x64
 
-    .line 142
+    .line 155
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 149
+    .line 162
     return-void
 .end method
