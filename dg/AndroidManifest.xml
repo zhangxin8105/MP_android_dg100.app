@@ -65,7 +65,7 @@
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.waxgourd.wg.module.player.PlayerActivity" android:screenOrientation="portrait"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.waxgourd.wg.module.sharepage.SharePageActivity" android:screenOrientation="portrait"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.waxgourd.wg.module.videolist.VideoListActivity" android:screenOrientation="portrait"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.waxgourd.wg.module.localplayer.LocalPlayerActivity" android:screenOrientation="landscape"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.waxgourd.wg.module.localplayer.LocalPlayerActivity" android:screenOrientation="sensorLandscape"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.waxgourd.wg.module.topicvideolist.TopicVideoListActivity" android:screenOrientation="portrait"/>
         <activity android:exported="true" android:label="@string/app_name" android:name="com.waxgourd.wg.wxapi.WXEntryActivity" android:theme="@android:style/Theme.Translucent"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.waxgourd.wg.module.contact.ContactActivity" android:screenOrientation="portrait"/>
