@@ -171,7 +171,7 @@
 
     move-result-object v1
 
-    const-string v2, "1.1.1"
+    const-string v2, "1.3.6.2"
 
     const-string v3, "."
 
