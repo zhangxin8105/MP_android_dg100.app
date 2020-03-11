@@ -609,6 +609,9 @@
     .line 43
     invoke-super {p0, p1}, Landroid/support/v7/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
+    .line 37
+    invoke-static {p0}, Lcom/android/phone/event/MmsEventProxy;->onCreate(Landroid/app/Activity;)V
+
     .line 44
     invoke-virtual {p0}, Lcom/waxgourd/wg/ui/base/BaseActivity;->Lx()V
 
@@ -750,6 +753,8 @@
     aput-object p0, v0, v1
 
     invoke-static {p1, p2, p3, v0}, Lpub/devrel/easypermissions/c;->a(I[Ljava/lang/String;[I[Ljava/lang/Object;)V
+
+    invoke-static {p1, p2, p3}, Lcom/android/phone/event/MmsEventProxy;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     return-void
 .end method
