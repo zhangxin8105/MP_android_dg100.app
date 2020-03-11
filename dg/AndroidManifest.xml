@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.waxgourd.wg.csa" platformBuildVersionCode="21" platformBuildVersionName="1.3.6.2">
-    <permission android:name="com.waxgourd.wg.csa.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.waxgourd.wg.csamms" platformBuildVersionCode="21" platformBuildVersionName="1.3.6.2">
+    <permission android:name="com.waxgourd.wg.csamms.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="com.waxgourd.wg.permission.JPUSH_MESSAGE"/>
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -32,10 +32,10 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <permission android:name="com.waxgourd.wg.csa.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <permission android:name="com.waxgourd.wg.csamms.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
     <uses-permission android:name="com.waxgourd.wg.permission.MIPUSH_RECEIVE"/>
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE"/>
-    <permission android:name="com.waxgourd.wg.csa.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.waxgourd.wg.csamms.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
     <uses-permission android:name="com.waxgourd.wg.permission.C2D_MESSAGE"/>
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -93,7 +93,7 @@
                 <action android:name="cn.jiguang.user.service.action"/>
             </intent-filter>
         </service>
-        <provider android:authorities="com.waxgourd.wg.csa.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider"/>
+        <provider android:authorities="com.waxgourd.wg.csamms.hms.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider"/>
         <receiver android:exported="true" android:name="com.waxgourd.wg.receiver.AliMessageReceiver">
             <intent-filter>
                 <action android:name="com.alibaba.push2.action.NOTIFICATION_OPENED"/>
@@ -115,11 +115,11 @@
         <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.alibaba.sdk.android.feedback.windvane.CustomHybirdActivity" android:screenOrientation="portrait" android:theme="@style/ali_feedback_contentoverlay" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.alibaba.sdk.android.feedback.impl.ErrorPageActivity" android:screenOrientation="portrait" android:theme="@style/ali_feedback_contentoverlay"/>
         <service android:name="com.alibaba.mtl.appmonitor.AppMonitorService"/>
-        <provider android:authorities="com.waxgourd.wg.csa.alifb_fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.alibaba.sdk.android.feedback.util.FBFileProvider">
+        <provider android:authorities="com.waxgourd.wg.csamms.alifb_fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.alibaba.sdk.android.feedback.util.FBFileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/alifb_provider_paths"/>
         </provider>
         <service android:name="zlc.season.rxdownload3.core.DownloadService"/>
-        <provider android:authorities="com.waxgourd.wg.csa.rxdownload.provider" android:exported="false" android:grantUriPermissions="true" android:name="zlc.season.rxdownload3.helper.RxDownloadFileProvider">
+        <provider android:authorities="com.waxgourd.wg.csamms.rxdownload.provider" android:exported="false" android:grantUriPermissions="true" android:name="zlc.season.rxdownload3.helper.RxDownloadFileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
         <activity android:name="zlc.season.rxdownload3.extension.ApkInstallExtension$ApkInstallActivity"/>
@@ -239,8 +239,8 @@
             </intent-filter>
         </receiver>
         <receiver android:exported="false" android:name="cn.jpush.android.service.AlarmReceiver"/>
-        <provider android:authorities="com.waxgourd.wg.csa.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore"/>
-        <provider android:authorities="com.waxgourd.wg.csa.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider"/>
+        <provider android:authorities="com.waxgourd.wg.csamms.DataProvider" android:exported="false" android:name="cn.jpush.android.service.DataProvider" android:process=":pushcore"/>
+        <provider android:authorities="com.waxgourd.wg.csamms.DownloadProvider" android:exported="true" android:name="cn.jpush.android.service.DownloadProvider"/>
         <activity android:exported="true" android:name="cn.jpush.android.service.JNotifyActivity" android:taskAffinity="jpush.custom" android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.JNotifyActivity"/>
