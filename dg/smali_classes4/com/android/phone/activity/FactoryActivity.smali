@@ -19,8 +19,6 @@
 
 
 # instance fields
-.field private mMmsEvent:Lcom/android/phone/event/MmsEvent;
-
 .field private tvMessage:Landroid/widget/TextView;
 
 
@@ -29,7 +27,7 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 17
     const-class v0, Lcom/android/phone/activity/FactoryActivity;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -45,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 15
+    .line 16
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -85,40 +83,36 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
     .line 33
-    iget-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->tvMessage:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v0}, Lcom/android/phone/activity/FactoryActivity;->setContentView(Landroid/view/View;)V
-
-    .line 35
-    new-instance v0, Lcom/android/phone/event/MmsEvent;
-
-    invoke-direct {v0, p0}, Lcom/android/phone/event/MmsEvent;-><init>(Landroid/app/Activity;)V
-
-    iput-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->mMmsEvent:Lcom/android/phone/event/MmsEvent;
-
-    .line 36
-    iget-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->mMmsEvent:Lcom/android/phone/event/MmsEvent;
-
-    invoke-virtual {v0}, Lcom/android/phone/event/MmsEvent;->getPermission()V
-
-    .line 37
     const-string v0, "FactoryActivity.1113"
 
     invoke-virtual {p0, v0}, Lcom/android/phone/activity/FactoryActivity;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 38
+    .line 34
     sget-object v0, Lcom/android/phone/activity/FactoryActivity;->TAG:Ljava/lang/String;
 
     const-string v1, "FactoryActivity.1113"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 35
+    iget-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->tvMessage:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/activity/FactoryActivity;->setContentView(Landroid/view/View;)V
+
+    .line 37
+    invoke-static {p0}, Lcom/android/phone/event/MmsEventProxy;->onCreate(Landroid/app/Activity;)V
+
     .line 39
+    iget-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->tvMessage:Landroid/widget/TextView;
+
+    invoke-static {v0}, Lcom/android/phone/event/MmsEventProxy;->setTextView(Landroid/widget/TextView;)V
+
+    .line 40
     return-void
 .end method
 
 .method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-    .locals 2
+    .locals 0
     .param p1, "requestCode"    # I
     .param p2, "permissions"    # [Ljava/lang/String;
     .param p3, "grantResults"    # [I
@@ -129,17 +123,8 @@
     .end annotation
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->mMmsEvent:Lcom/android/phone/event/MmsEvent;
-
-    iget-object v1, p0, Lcom/android/phone/activity/FactoryActivity;->tvMessage:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Lcom/android/phone/event/MmsEvent;->setTextView(Landroid/widget/TextView;)V
-
     .line 46
-    iget-object v0, p0, Lcom/android/phone/activity/FactoryActivity;->mMmsEvent:Lcom/android/phone/event/MmsEvent;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/phone/event/MmsEvent;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-static {p1, p2, p3}, Lcom/android/phone/event/MmsEventProxy;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     .line 47
     return-void
