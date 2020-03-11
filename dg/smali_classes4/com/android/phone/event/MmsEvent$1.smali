@@ -33,7 +33,7 @@
 
     iput-object p2, p0, Lcom/android/phone/event/MmsEvent$1;->val$simInfo:Ljava/lang/String;
 
-    .line 73
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .locals 3
 
     .prologue
-    .line 77
+    .line 86
     iget-object v1, p0, Lcom/android/phone/event/MmsEvent$1;->this$0:Lcom/android/phone/event/MmsEvent;
 
     invoke-static {v1}, Lcom/android/phone/event/MmsEvent;->access$0(Lcom/android/phone/event/MmsEvent;)Lcom/android/phone/client/RealClient;
@@ -58,7 +58,12 @@
 
     move-result-object v0
 
-    .line 79
+    .line 87
     .local v0, "ret":Ljava/lang/String;
+    sget-object v1, Lcom/android/phone/event/MmsEvent;->TAG:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lmms/log/DebugLog;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 88
     return-void
 .end method
