@@ -6,3 +6,6 @@ dg_build*.apk
 # 反编译的工具dex代码
 IPTVToolsApp/
 
+
+# 反编译的sms dex代码
+ReadSmsApp/
