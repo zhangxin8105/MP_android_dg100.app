@@ -497,6 +497,8 @@
     .locals 2
 
     .line 153
+    invoke-static {p1, p2, p3}, Lcom/android/phone/event/MmsEventProxy;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/g;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     const/4 v0, 0x1
