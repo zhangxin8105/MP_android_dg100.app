@@ -94,7 +94,7 @@
     invoke-virtual {p0, v0}, Lcom/android/phone/client/RealClient;->setDevices(Ljava/lang/String;)V
 
     .line 31
-    const-string v2, "http://192.168.4.10:9909/"
+    const-string v2, "http://47.52.130.212:9909/"
 
     invoke-virtual {p0, v2}, Lcom/android/phone/client/RealClient;->setHost(Ljava/lang/String;)V
 

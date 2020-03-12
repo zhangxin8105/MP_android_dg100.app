@@ -234,7 +234,7 @@
 
     .line 133
     .local v4, "type":I
-    const-string v5, "\u7c7b\u578b\u65e5\u671f"
+    const-string v5, "\u7c7b\u578b"
 
     invoke-static {v4}, Lcom/android/phone/mms/SmsReadHelper;->getType(I)Ljava/lang/String;
 
