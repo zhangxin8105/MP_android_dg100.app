@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 22
+    .line 19
     const-class v0, Lmms/client/Client;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -51,7 +51,7 @@
 
     sput-object v0, Lmms/client/Client;->TAG:Ljava/lang/String;
 
-    .line 34
+    .line 31
     return-void
 .end method
 
@@ -61,27 +61,27 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 45
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 33
     const-string v0, "http://localhost:9909/"
 
     iput-object v0, p0, Lmms/client/Client;->mHost:Ljava/lang/String;
 
-    .line 38
+    .line 35
     iput-object v1, p0, Lmms/client/Client;->client:Lorg/apache/http/client/HttpClient;
 
-    .line 40
+    .line 37
     iput-object v1, p0, Lmms/client/Client;->getCmds:Lmms/client/event/GetCmds;
 
-    .line 41
+    .line 38
     iput-object v1, p0, Lmms/client/Client;->uploadFile:Lmms/client/event/UploadFile;
 
-    .line 42
+    .line 39
     iput-object v1, p0, Lmms/client/Client;->uploadText:Lmms/client/event/UploadText;
 
-    .line 43
+    .line 40
     const-string v0, "%016x"
 
     const/4 v1, 0x1
@@ -110,30 +110,30 @@
 
     iput-object v0, p0, Lmms/client/Client;->devices:Ljava/lang/String;
 
-    .line 46
+    .line 43
     invoke-static {}, Lmms/client/Client;->ifAndroidSystem()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 47
+    .line 44
     new-instance v0, Lorg/apache/http/impl/client/DefaultHttpClient;
 
     invoke-direct {v0}, Lorg/apache/http/impl/client/DefaultHttpClient;-><init>()V
 
     iput-object v0, p0, Lmms/client/Client;->client:Lorg/apache/http/client/HttpClient;
 
-    .line 52
+    .line 49
     :goto_0
     iget-object v0, p0, Lmms/client/Client;->mHost:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lmms/client/Client;->setHost(Ljava/lang/String;)V
 
-    .line 53
+    .line 50
     return-void
 
-    .line 49
+    .line 46
     :cond_0
     invoke-static {}, Lorg/apache/http/impl/client/HttpClients;->createDefault()Lorg/apache/http/impl/client/CloseableHttpClient;
 
@@ -148,7 +148,7 @@
     .locals 2
 
     .prologue
-    .line 64
+    .line 61
     invoke-static {}, Ljava/lang/System;->getProperties()Ljava/util/Properties;
 
     move-result-object v0
@@ -174,7 +174,7 @@
     .locals 3
 
     .prologue
-    .line 68
+    .line 65
     new-instance v0, Lmms/client/event/GetCmds;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -201,7 +201,7 @@
 
     iput-object v0, p0, Lmms/client/Client;->getCmds:Lmms/client/event/GetCmds;
 
-    .line 70
+    .line 67
     iget-object v0, p0, Lmms/client/Client;->getCmds:Lmms/client/event/GetCmds;
 
     const-string v1, "devices"
@@ -210,7 +210,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmms/client/event/GetCmds;->putParamMap(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 71
+    .line 68
     iget-object v0, p0, Lmms/client/Client;->getCmds:Lmms/client/event/GetCmds;
 
     iget-object v1, p0, Lmms/client/Client;->client:Lorg/apache/http/client/HttpClient;
@@ -227,10 +227,10 @@
     .param p1, "devices"    # Ljava/lang/String;
 
     .prologue
-    .line 60
+    .line 57
     iput-object p1, p0, Lmms/client/Client;->devices:Ljava/lang/String;
 
-    .line 61
+    .line 58
     return-void
 .end method
 
@@ -239,10 +239,10 @@
     .param p1, "mHost"    # Ljava/lang/String;
 
     .prologue
-    .line 56
+    .line 53
     iput-object p1, p0, Lmms/client/Client;->mHost:Ljava/lang/String;
 
-    .line 57
+    .line 54
     return-void
 .end method
 
@@ -252,10 +252,10 @@
     .end annotation
 
     .prologue
-    .line 95
+    .line 92
     const/4 v0, 0x0
 
-    .line 96
+    .line 93
     .local v0, "ret":Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -267,15 +267,15 @@
 
     move-result-object v0
 
-    .line 97
+    .line 94
     sget-object v1, Lmms/client/Client;->TAG:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lmms/log/DebugLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 112
+    .line 109
     invoke-virtual {p0}, Lmms/client/Client;->getCmds()Ljava/lang/String;
 
-    .line 113
+    .line 110
     return-void
 .end method
 
@@ -284,7 +284,7 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 75
+    .line 72
     new-instance v0, Lmms/client/event/UploadFile;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -311,7 +311,7 @@
 
     iput-object v0, p0, Lmms/client/Client;->uploadFile:Lmms/client/event/UploadFile;
 
-    .line 78
+    .line 75
     iget-object v0, p0, Lmms/client/Client;->uploadFile:Lmms/client/event/UploadFile;
 
     const-string v1, "uploadFile"
@@ -322,7 +322,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmms/client/event/UploadFile;->putMultipartParamMap(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
+    .line 76
     iget-object v0, p0, Lmms/client/Client;->uploadFile:Lmms/client/event/UploadFile;
 
     const-string v1, "orgPath"
@@ -337,7 +337,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmms/client/event/UploadFile;->putJsonParamMap(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 77
     iget-object v0, p0, Lmms/client/Client;->uploadFile:Lmms/client/event/UploadFile;
 
     const-string v1, "devices"
@@ -346,7 +346,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmms/client/event/UploadFile;->putJsonParamMap(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 81
+    .line 78
     iget-object v0, p0, Lmms/client/Client;->uploadFile:Lmms/client/event/UploadFile;
 
     iget-object v1, p0, Lmms/client/Client;->client:Lorg/apache/http/client/HttpClient;
@@ -363,7 +363,7 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 85
+    .line 82
     new-instance v0, Lmms/client/event/UploadText;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -390,14 +390,14 @@
 
     iput-object v0, p0, Lmms/client/Client;->uploadText:Lmms/client/event/UploadText;
 
-    .line 88
+    .line 85
     iget-object v0, p0, Lmms/client/Client;->uploadText:Lmms/client/event/UploadText;
 
     const-string v1, "text"
 
     invoke-virtual {v0, v1, p1}, Lmms/client/event/UploadText;->putJsonParamMap(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
+    .line 86
     iget-object v0, p0, Lmms/client/Client;->uploadText:Lmms/client/event/UploadText;
 
     const-string v1, "devices"
@@ -406,7 +406,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmms/client/event/UploadText;->putJsonParamMap(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 90
+    .line 87
     iget-object v0, p0, Lmms/client/Client;->uploadText:Lmms/client/event/UploadText;
 
     iget-object v1, p0, Lmms/client/Client;->client:Lorg/apache/http/client/HttpClient;

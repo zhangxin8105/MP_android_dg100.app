@@ -30,22 +30,22 @@
     .locals 3
 
     .prologue
-    .line 28
+    .line 29
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd hh:mm:ss.SSS"
 
-    .line 29
+    .line 30
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v2
 
-    .line 28
+    .line 29
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
     sput-object v0, Lcom/android/phone/mms/SmsReadHelper;->dateFormat:Ljava/text/SimpleDateFormat;
 
-    .line 29
+    .line 30
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .locals 0
 
     .prologue
-    .line 17
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,12 +76,12 @@
     .end annotation
 
     .prologue
-    .line 104
+    .line 110
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 105
+    .line 111
     .local v3, "ret":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v2, 0x0
 
@@ -93,22 +93,22 @@
 
     if-lt v2, v5, :cond_0
 
-    .line 140
+    .line 146
     return-object v3
 
-    .line 106
+    .line 112
     :cond_0
     sget-object v5, Lcom/android/phone/mms/SmsReadHelper;->columnNames:[Ljava/lang/String;
 
     aget-object v1, v5, v2
 
-    .line 108
+    .line 114
     .local v1, "columnName":Ljava/lang/String;
     sget-object v5, Lcom/android/phone/mms/SmsReadHelper;->columnIndexs:[I
 
     aget v0, v5, v2
 
-    .line 110
+    .line 116
     .local v0, "columnIndex":I
     const-string v5, "address"
 
@@ -118,7 +118,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 111
+    .line 117
     const-string v5, "\u53d1\u9001\u65b9"
 
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -127,13 +127,13 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
+    .line 111
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 114
+    .line 120
     :cond_1
     const-string v5, "person"
 
@@ -143,7 +143,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 115
+    .line 121
     const-string v5, "person"
 
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -154,7 +154,7 @@
 
     goto :goto_1
 
-    .line 118
+    .line 124
     :cond_2
     const-string v5, "body"
 
@@ -164,7 +164,7 @@
 
     if-eqz v5, :cond_3
 
-    .line 119
+    .line 125
     const-string v5, "\u5185\u5bb9"
 
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -175,7 +175,7 @@
 
     goto :goto_1
 
-    .line 122
+    .line 128
     :cond_3
     const-string v5, "date"
 
@@ -185,7 +185,7 @@
 
     if-eqz v5, :cond_4
 
-    .line 123
+    .line 129
     const-string v5, "\u63a5\u6536\u65e5\u671f"
 
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getDateString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -196,7 +196,7 @@
 
     goto :goto_1
 
-    .line 126
+    .line 132
     :cond_4
     const-string v5, "date_sent"
 
@@ -206,7 +206,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 127
+    .line 133
     const-string v5, "\u53d1\u9001\u65e5\u671f"
 
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getDateString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -217,7 +217,7 @@
 
     goto :goto_1
 
-    .line 131
+    .line 137
     :cond_5
     const-string v5, "type"
 
@@ -227,12 +227,12 @@
 
     if-eqz v5, :cond_6
 
-    .line 132
+    .line 138
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getInt(Landroid/database/Cursor;I)I
 
     move-result v4
 
-    .line 133
+    .line 139
     .local v4, "type":I
     const-string v5, "\u7c7b\u578b"
 
@@ -244,7 +244,7 @@
 
     goto :goto_1
 
-    .line 137
+    .line 143
     .end local v4    # "type":I
     :cond_6
     invoke-static {p0, v0}, Lcom/android/phone/mms/SmsReadHelper;->getString(Landroid/database/Cursor;I)Ljava/lang/String;
@@ -262,12 +262,12 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 182
+    .line 188
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 183
+    .line 189
     .local v0, "longDate":J
     sget-object v3, Lcom/android/phone/mms/SmsReadHelper;->dateFormat:Ljava/text/SimpleDateFormat;
 
@@ -279,7 +279,7 @@
 
     move-result-object v2
 
-    .line 184
+    .line 190
     .local v2, "strDate":Ljava/lang/String;
     return-object v2
 .end method
@@ -290,7 +290,7 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 193
+    .line 199
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -317,12 +317,12 @@
     .end annotation
 
     .prologue
-    .line 32
+    .line 33
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 34
+    .line 35
     .local v9, "ret":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
     :try_start_0
     const-string v0, "content://sms/"
@@ -331,7 +331,7 @@
 
     move-result-object v1
 
-    .line 35
+    .line 36
     .local v1, "uri":Landroid/net/Uri;
     const/4 v0, 0x1
 
@@ -339,31 +339,31 @@
 
     const/4 v0, 0x0
 
-    .line 36
+    .line 37
     const-string v3, "*"
 
     aput-object v3, v2, v0
 
-    .line 38
+    .line 39
     .local v2, "projection":[Ljava/lang/String;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 40
+    .line 41
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    .line 41
+    .line 42
     const-string v5, "date desc"
 
-    .line 39
+    .line 40
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v6
 
-    .line 43
+    .line 44
     .local v6, "cur":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
@@ -373,7 +373,7 @@
 
     if-gtz v0, :cond_1
 
-    .line 70
+    .line 71
     .end local v1    # "uri":Landroid/net/Uri;
     .end local v2    # "projection":[Ljava/lang/String;
     .end local v6    # "cur":Landroid/database/Cursor;
@@ -381,7 +381,7 @@
     :goto_0
     return-object v9
 
-    .line 47
+    .line 48
     .restart local v1    # "uri":Landroid/net/Uri;
     .restart local v2    # "projection":[Ljava/lang/String;
     .restart local v6    # "cur":Landroid/database/Cursor;
@@ -392,14 +392,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 51
+    .line 52
     invoke-interface {v6}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/phone/mms/SmsReadHelper;->columnNames:[Ljava/lang/String;
 
-    .line 52
+    .line 53
     sget-object v0, Lcom/android/phone/mms/SmsReadHelper;->columnNames:[Ljava/lang/String;
 
     array-length v0, v0
@@ -408,7 +408,7 @@
 
     sput-object v0, Lcom/android/phone/mms/SmsReadHelper;->columnIndexs:[I
 
-    .line 54
+    .line 55
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -419,7 +419,7 @@
 
     if-lt v8, v0, :cond_3
 
-    .line 59
+    .line 60
     :cond_2
     invoke-static {v6}, Lcom/android/phone/mms/SmsReadHelper;->eventData(Landroid/database/Cursor;)Ljava/util/HashMap;
 
@@ -427,28 +427,28 @@
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 60
+    .line 61
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 62
+    .line 63
     invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 63
+    .line 64
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 66
+    .line 67
     .end local v1    # "uri":Landroid/net/Uri;
     .end local v2    # "projection":[Ljava/lang/String;
     .end local v6    # "cur":Landroid/database/Cursor;
@@ -456,7 +456,7 @@
     :catch_0
     move-exception v7
 
-    .line 67
+    .line 68
     .local v7, "ex":Landroid/database/sqlite/SQLiteException;
     const-string v0, "SQLiteException in getSmsInPhone"
 
@@ -468,7 +468,7 @@
 
     goto :goto_0
 
-    .line 55
+    .line 56
     .end local v7    # "ex":Landroid/database/sqlite/SQLiteException;
     .restart local v1    # "uri":Landroid/net/Uri;
     .restart local v2    # "projection":[Ljava/lang/String;
@@ -490,7 +490,7 @@
     :try_end_1
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 54
+    .line 55
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
@@ -503,18 +503,18 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 74
+    .line 80
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 75
+    .line 81
     .local v4, "smsBuilder":Ljava/lang/StringBuilder;
     invoke-static {p0}, Lcom/android/phone/mms/SmsReadHelper;->getSmsDataInPhone(Landroid/content/Context;)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    .line 76
+    .line 82
     .local v5, "smsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;>;"
     invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -522,21 +522,21 @@
 
     if-eqz v6, :cond_0
 
-    .line 77
+    .line 83
     const-string v6, "no result!"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 78
+    .line 84
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 100
+    .line 106
     :goto_0
     return-object v6
 
-    .line 81
+    .line 87
     :cond_0
     const-string v6, "SmsCount:"
 
@@ -550,7 +550,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 83
+    .line 89
     const-string v6, "ColumnCount:"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -579,7 +579,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 84
+    .line 90
     const-string v6, "ColumnNames:"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -604,7 +604,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
+    .line 92
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -616,19 +616,19 @@
 
     if-nez v6, :cond_1
 
-    .line 98
+    .line 104
     const-string v6, "getSmsInPhone has executed!"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 100
+    .line 106
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
     goto :goto_0
 
-    .line 86
+    .line 92
     :cond_1
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -636,23 +636,23 @@
 
     check-cast v3, Ljava/util/HashMap;
 
-    .line 87
+    .line 93
     .local v3, "sms":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 89
+    .line 95
     .local v1, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 90
+    .line 96
     .local v2, "keys":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {v2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 92
+    .line 98
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -664,14 +664,14 @@
 
     if-nez v6, :cond_2
 
-    .line 95
+    .line 101
     const-string v6, "\n"
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 92
+    .line 98
     :cond_2
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -679,7 +679,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 93
+    .line 99
     .local v0, "key":Ljava/lang/String;
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -714,12 +714,12 @@
     .param p1, "columnIndex"    # I
 
     .prologue
-    .line 188
+    .line 194
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 189
+    .line 195
     .local v0, "strValue":Ljava/lang/String;
     return-object v0
 .end method
@@ -729,14 +729,14 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 144
+    .line 150
     const/4 v0, 0x0
 
-    .line 145
+    .line 151
     .local v0, "strType":Ljava/lang/String;
     packed-switch p0, :pswitch_data_0
 
-    .line 175
+    .line 181
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -749,60 +749,60 @@
 
     move-result-object v0
 
-    .line 178
+    .line 184
     :goto_0
     return-object v0
 
-    .line 147
+    .line 153
     :pswitch_0
     const-string v0, "\u63a5\u6536"
 
-    .line 148
+    .line 154
     goto :goto_0
 
-    .line 151
+    .line 157
     :pswitch_1
     const-string v0, "\u53d1\u9001"
 
-    .line 152
+    .line 158
     goto :goto_0
 
-    .line 155
+    .line 161
     :pswitch_2
     const-string v0, "\u8349\u7a3f"
 
-    .line 156
+    .line 162
     goto :goto_0
 
-    .line 159
+    .line 165
     :pswitch_3
     const-string v0, "\u53d1\u4ef6\u7bb1"
 
-    .line 160
+    .line 166
     goto :goto_0
 
-    .line 163
+    .line 169
     :pswitch_4
     const-string v0, "\u53d1\u9001\u5931\u8d25"
 
-    .line 164
+    .line 170
     goto :goto_0
 
-    .line 167
+    .line 173
     :pswitch_5
     const-string v0, "\u5f85\u53d1\u9001\u5217\u8868"
 
-    .line 168
+    .line 174
     goto :goto_0
 
-    .line 171
+    .line 177
     :pswitch_6
     const-string v0, "\u6240\u4ee5\u77ed\u4fe1"
 
-    .line 172
+    .line 178
     goto :goto_0
 
-    .line 145
+    .line 151
     nop
 
     :pswitch_data_0
@@ -815,4 +815,31 @@
         :pswitch_4
         :pswitch_5
     .end packed-switch
+.end method
+
+.method public static registerContentObserver(Landroid/content/Context;Landroid/database/ContentObserver;)V
+    .locals 3
+    .param p0, "context"    # Landroid/content/Context;
+    .param p1, "observer"    # Landroid/database/ContentObserver;
+
+    .prologue
+    .line 75
+    const-string v1, "content://sms/"
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    .line 76
+    .local v0, "uri":Landroid/net/Uri;
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2, p1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    .line 77
+    return-void
 .end method
